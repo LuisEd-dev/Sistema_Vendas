@@ -1,0 +1,12 @@
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\bin\Debug\SistemaVendas.exe.config
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\bin\Debug\SistemaVendas.exe
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\bin\Debug\SistemaVendas.pdb
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.csprojAssemblyReference.cache
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.frm_cad_usuario.resources
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.frm_login.resources
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.frm_vendas.resources
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.Properties.Resources.resources
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.csproj.GenerateResource.cache
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.csproj.CoreCompileInputs.cache
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.exe
+C:\Users\Home\Desktop\ead\poo\Sistema_Vendas\SistemaVendas\SistemaVendas\obj\Debug\SistemaVendas.pdb
