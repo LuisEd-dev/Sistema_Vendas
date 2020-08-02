@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,34 +51,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClVariaveisGlobais.cs" />
-    <Compile Include="frm_cad_usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_cad_usuario.Designer.cs">
-      <DependentUpon>frm_cad_usuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_vendas.cs">
+    <Compile Include="frm_principal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_vendas.Designer.cs">
-      <DependentUpon>frm_vendas.cs</DependentUpon>
+    <Compile Include="frm_principal.Designer.cs">
+      <DependentUpon>frm_principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_cad_usuario.resx">
-      <DependentUpon>frm_cad_usuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_vendas.resx">
-      <DependentUpon>frm_vendas.cs</DependentUpon>
+    <EmbeddedResource Include="frm_principal.resx">
+      <DependentUpon>frm_principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +92,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="file_type_favicon_icon_130608.ico" />
+    <Content Include="icone.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

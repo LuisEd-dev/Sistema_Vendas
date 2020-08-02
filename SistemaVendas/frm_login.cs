@@ -47,11 +47,18 @@ namespace SistemaVendas
 
             if (senha_banco == senha_digitada)
             {
-                MessageBox.Show("Ok");
+                frm_principal mostrar_Principal = new frm_principal();
+                mostrar_Principal.Show();
+                this.Hide();
             } else
             {
                 MessageBox.Show("Usuário ou Senha Incorretos");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
