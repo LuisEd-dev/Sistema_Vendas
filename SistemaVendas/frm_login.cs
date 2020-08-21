@@ -30,30 +30,36 @@ namespace SistemaVendas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String nome_digitado = txt_usuario.Text;
-            String senha_digitada = txt_senha.Text;
-            String senha_banco = "";
+            String nome_digitado, nome_q_veio_do_banco;
+            String senha_digitada, senha_q_veio_do_banco;
+
+            nome_digitado = txt_usuario.Text;
+            senha_digitada = txt_senha.Text;
+            senha_q_veio_do_banco = "";
+
+            senha_q_veio_do_banco = "";
 
             ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
-            OleDbCommand comando = new OleDbCommand("SELECT * FROM tbUsuarios where nome='" + nome_digitado + "'");
+            OleDbCommand comando =
+                new OleDbCommand("SELECT * FROM tbUsuarios WHERE nome='" + nome_digitado + "'");
             comando.Connection = ClVariaveisGlobais.conexao;
             ClVariaveisGlobais.conexao.Open();
             OleDbDataReader leitor = comando.ExecuteReader();
             while (leitor.Read())
             {
-                senha_banco = leitor.GetString(1);
+                nome_q_veio_do_banco = leitor.GetString(0);
+                senha_q_veio_do_banco = leitor.GetString(1);
             }
             ClVariaveisGlobais.conexao.Close();
 
-            if (senha_banco == senha_digitada)
+            if (senha_digitada == senha_q_veio_do_banco & senha_q_veio_do_banco != "")
             {
-                frm_principal mostrar_Principal = new frm_principal();
-                mostrar_Principal.Show();
+                frm_principal mostrarTelaPrincipal = new frm_principal();
+                mostrarTelaPrincipal.Show();
                 this.Hide();
-            } else
-            {
-                MessageBox.Show("Usuário ou Senha Incorretos");
             }
+            else
+                MessageBox.Show("Usuário ou senha incorretos.");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

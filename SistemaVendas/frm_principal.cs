@@ -22,7 +22,7 @@ namespace SistemaVendas
         {
             ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
 
-            OleDbCommand comando = new OleDbCommand("INSERT INTO tbUsuarios(nome, senha) VALUES ('" + txt_nome_cadastro.Text + "','" + txt_senha_cadastro.Text + "')");
+            OleDbCommand comando = new OleDbCommand("INSERT INTO tbUsuarios(nome, senha) VALUES ('" + txt_nome_cadastro.Text + "','" + txt_quantidadde_cadastro.Text + "')");
             comando.Connection = ClVariaveisGlobais.conexao;
             ClVariaveisGlobais.conexao.Open();
             comando.ExecuteNonQuery();
@@ -63,7 +63,7 @@ namespace SistemaVendas
         {
             ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
 
-            OleDbCommand comando = new OleDbCommand("UPDATE tbUsuarios SET senha='" + txt_senha_editar.Text + "' WHERE nome='"+ txt_nome_editar.Text + "'");
+            OleDbCommand comando = new OleDbCommand("UPDATE tbUsuarios SET senha='" + txt_quantidade_editar.Text + "' WHERE nome='"+ txt_nome_editar.Text + "'");
             comando.Connection = ClVariaveisGlobais.conexao;
             ClVariaveisGlobais.conexao.Open();
             comando.ExecuteNonQuery();
