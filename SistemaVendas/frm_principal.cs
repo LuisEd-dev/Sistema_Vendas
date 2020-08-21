@@ -22,7 +22,7 @@ namespace SistemaVendas
         {
             ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
 
-            OleDbCommand comando = new OleDbCommand("INSERT INTO tbUsuarios(nome, senha) VALUES ('" + txt_nome_cadastro.Text + "','" + txt_quantidadde_cadastro.Text + "')");
+            OleDbCommand comando = new OleDbCommand("INSERT INTO tbEstoque(nome, quantidade) VALUES ('" + txt_nome_cadastro.Text + "','" + txt_quantidade_cadastro.Text + "')");
             comando.Connection = ClVariaveisGlobais.conexao;
             ClVariaveisGlobais.conexao.Open();
             comando.ExecuteNonQuery();
@@ -51,7 +51,7 @@ namespace SistemaVendas
         {
             ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
 
-            OleDbCommand comando = new OleDbCommand("DELETE FROM tbUsuarios WHERE nome='" + txt_nome_apagar.Text + "'");
+            OleDbCommand comando = new OleDbCommand("DELETE FROM tbEstoque WHERE nome='" + txt_nome_apagar.Text + "'");
             comando.Connection = ClVariaveisGlobais.conexao;
             ClVariaveisGlobais.conexao.Open();
             comando.ExecuteNonQuery();
@@ -63,7 +63,43 @@ namespace SistemaVendas
         {
             ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
 
-            OleDbCommand comando = new OleDbCommand("UPDATE tbUsuarios SET senha='" + txt_quantidade_editar.Text + "' WHERE nome='"+ txt_nome_editar.Text + "'");
+            OleDbCommand comando = new OleDbCommand("UPDATE tbEstoque SET quantidade='" + txt_quantidade_editar.Text + "' WHERE nome='"+ txt_nome_editar.Text + "'");
+            comando.Connection = ClVariaveisGlobais.conexao;
+            ClVariaveisGlobais.conexao.Open();
+            comando.ExecuteNonQuery();
+            ClVariaveisGlobais.conexao.Close();
+            MessageBox.Show("Dados Editados Com Sucesso!");
+        }
+
+        private void btn_cadastrar_usuario_Click(object sender, EventArgs e)
+        {
+            ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
+
+            OleDbCommand comando = new OleDbCommand("INSERT INTO tbUsuarios(nome, senha) VALUES ('" + txt_usuario_cadastrar.Text + "','" + txt_senha_cadastrar.Text + "')");
+            comando.Connection = ClVariaveisGlobais.conexao;
+            ClVariaveisGlobais.conexao.Open();
+            comando.ExecuteNonQuery();
+            ClVariaveisGlobais.conexao.Close();
+            MessageBox.Show("Dados Cadastrados Com Sucesso!");
+        }
+
+        private void btn_apagar_usuario_Click(object sender, EventArgs e)
+        {
+            ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
+
+            OleDbCommand comando = new OleDbCommand("DELETE FROM tbUsuarios WHERE nome='" + txt_usuario_apagar.Text + "'");
+            comando.Connection = ClVariaveisGlobais.conexao;
+            ClVariaveisGlobais.conexao.Open();
+            comando.ExecuteNonQuery();
+            ClVariaveisGlobais.conexao.Close();
+            MessageBox.Show("Dados Apagados Com Sucesso!");
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
+
+            OleDbCommand comando = new OleDbCommand("UPDATE tbUsuarios SET senha='" + txt_senha_editar.Text + "' WHERE nome='" + txt_usuario_editar.Text + "'");
             comando.Connection = ClVariaveisGlobais.conexao;
             ClVariaveisGlobais.conexao.Open();
             comando.ExecuteNonQuery();

@@ -51,7 +51,7 @@
             this.tab_estoque = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_cadastrar = new System.Windows.Forms.Button();
-            this.txt_quantidadde_cadastro = new System.Windows.Forms.TextBox();
+            this.txt_quantidade_cadastro = new System.Windows.Forms.TextBox();
             this.txt_nome_cadastro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -146,6 +146,7 @@
             this.btn_cadastrar_usuario.TabIndex = 7;
             this.btn_cadastrar_usuario.Text = "Cadastrar";
             this.btn_cadastrar_usuario.UseVisualStyleBackColor = true;
+            this.btn_cadastrar_usuario.Click += new System.EventHandler(this.btn_cadastrar_usuario_Click);
             // 
             // txt_senha_cadastrar
             // 
@@ -202,6 +203,7 @@
             this.btn_apagar_usuario.TabIndex = 12;
             this.btn_apagar_usuario.Text = "Apagar";
             this.btn_apagar_usuario.UseVisualStyleBackColor = true;
+            this.btn_apagar_usuario.Click += new System.EventHandler(this.btn_apagar_usuario_Click);
             // 
             // txt_usuario_apagar
             // 
@@ -242,6 +244,7 @@
             this.button6.TabIndex = 12;
             this.button6.Text = "Editar";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // txt_senha_editar
             // 
@@ -302,7 +305,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.btn_cadastrar);
-            this.tabPage1.Controls.Add(this.txt_quantidadde_cadastro);
+            this.tabPage1.Controls.Add(this.txt_quantidade_cadastro);
             this.tabPage1.Controls.Add(this.txt_nome_cadastro);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
@@ -324,12 +327,12 @@
             this.btn_cadastrar.UseVisualStyleBackColor = true;
             this.btn_cadastrar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txt_quantidadde_cadastro
+            // txt_quantidade_cadastro
             // 
-            this.txt_quantidadde_cadastro.Location = new System.Drawing.Point(11, 94);
-            this.txt_quantidadde_cadastro.Name = "txt_quantidadde_cadastro";
-            this.txt_quantidadde_cadastro.Size = new System.Drawing.Size(269, 20);
-            this.txt_quantidadde_cadastro.TabIndex = 6;
+            this.txt_quantidade_cadastro.Location = new System.Drawing.Point(11, 94);
+            this.txt_quantidade_cadastro.Name = "txt_quantidade_cadastro";
+            this.txt_quantidade_cadastro.Size = new System.Drawing.Size(269, 20);
+            this.txt_quantidade_cadastro.TabIndex = 6;
             // 
             // txt_nome_cadastro
             // 
@@ -394,9 +397,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(8, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 17);
+            this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Usuario";
+            this.label4.Text = "Nome";
             // 
             // tabPage6
             // 
@@ -452,9 +455,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(8, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 17);
+            this.label8.Size = new System.Drawing.Size(45, 17);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Usuario";
+            this.label8.Text = "Nome";
             // 
             // tabPage3
             // 
@@ -615,7 +618,7 @@
         private System.Windows.Forms.TabControl tab_estoque;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btn_cadastrar;
-        private System.Windows.Forms.TextBox txt_quantidadde_cadastro;
+        private System.Windows.Forms.TextBox txt_quantidade_cadastro;
         private System.Windows.Forms.TextBox txt_nome_cadastro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

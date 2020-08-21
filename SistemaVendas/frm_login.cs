@@ -30,14 +30,12 @@ namespace SistemaVendas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String nome_digitado, nome_q_veio_do_banco;
-            String senha_digitada, senha_q_veio_do_banco;
+            String nome_digitado, nome_banco;
+            String senha_digitada, senha_banco;
 
             nome_digitado = txt_usuario.Text;
             senha_digitada = txt_senha.Text;
-            senha_q_veio_do_banco = "";
-
-            senha_q_veio_do_banco = "";
+            senha_banco = "";
 
             ClVariaveisGlobais.conexao.ConnectionString = ClVariaveisGlobais.conecta;
             OleDbCommand comando =
@@ -47,12 +45,12 @@ namespace SistemaVendas
             OleDbDataReader leitor = comando.ExecuteReader();
             while (leitor.Read())
             {
-                nome_q_veio_do_banco = leitor.GetString(0);
-                senha_q_veio_do_banco = leitor.GetString(1);
+                nome_banco = leitor.GetString(0);
+                senha_banco = leitor.GetString(1);
             }
             ClVariaveisGlobais.conexao.Close();
 
-            if (senha_digitada == senha_q_veio_do_banco & senha_q_veio_do_banco != "")
+            if (senha_digitada == senha_banco & senha_banco != "")
             {
                 frm_principal mostrarTelaPrincipal = new frm_principal();
                 mostrarTelaPrincipal.Show();
